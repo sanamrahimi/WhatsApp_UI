@@ -13,16 +13,13 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: 3,
       child: Scaffold(
         appBar: AppBar(
           title: const Text('WhatsApp'),
           //add tabs
           bottom: const TabBar(
             tabs: [
-              Tab(
-                child: Icon(Icons.camera_alt),
-              ),
               Tab(
                 child: Text('Chats'),
               ),
@@ -35,10 +32,12 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
           actions: [
-            const Icon(Icons.search),
+            const Icon(Icons.camera_alt_outlined),
             const SizedBox(
-              width: 10,
+              width: 20,
             ),
+            const Icon(Icons.search),
+
             //popup menu
             PopupMenuButton(
                 icon: const Icon(Icons.more_horiz_outlined),
@@ -64,7 +63,6 @@ class _HomeScreenState extends State<HomeScreen> {
         //Tab Bars
         body: TabBarView(
           children: [
-            const Text('Camera'),
             ListView.builder(
                 itemCount: 20,
                 itemBuilder: (context, index) {
