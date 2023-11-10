@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:whatsapp_ui/app/all_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String id = 'home_screen';
@@ -17,6 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('WhatsApp'),
+          //add tabs
           bottom: const TabBar(
             tabs: [
               Tab(
@@ -38,6 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               width: 10,
             ),
+            //popup menu
             PopupMenuButton(
                 icon: const Icon(Icons.more_horiz_outlined),
                 itemBuilder: (context) => [
@@ -59,6 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
+        //Tab Bars
         body: TabBarView(
           children: [
             const Text('Camera'),
